@@ -32,6 +32,10 @@ jobs:
         COOKIE_QQYD14: ${{ secrets.COOKIE_QQYD14 }}
         COOKIE_QQYD15: ${{ secrets.COOKIE_QQYD15 }}
         COOKIE_QQYD16: ${{ secrets.COOKIE_QQYD16 }}
+        COOKIE_QQYD17: ${{ secrets.COOKIE_QQYD17 }}
+        COOKIE_QQYD18: ${{ secrets.COOKIE_QQYD18 }}
+        COOKIE_QQYD19: ${{ secrets.COOKIE_QQYD19 }}
+        COOKIE_QQYD20: ${{ secrets.COOKIE_QQYD20 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 10.x
@@ -141,4 +145,32 @@ jobs:
           node qqyd.js
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD16 }}
+      - name: ' 运行 【企鹅阅读17】'
+        if: env.COOKIE_QQYD17
+        run: |
+          node qqyd.js
+        env:
+          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD17 }}
+      - name: ' 运行 【企鹅阅读18】'
+        if: env.COOKIE_QQYD18
+        run: |
+          node qqyd.js
+        env:
+          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD18 }}
+      - name: ' 运行 【企鹅阅读19】'
+        if: env.COOKIE_QQYD19
+        run: |
+          node qqyd.js
+        env:
+          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD19 }}
+      - name: ' 运行 【企鹅阅读20】'
+        if: env.COOKIE_QQYD20
+        run: |
+          node qqyd.js
+        env:
+          COOKIE_QQYD: ${{ secrets.COOKIE_QQYD20}}
           
+         
+     
+       
+
