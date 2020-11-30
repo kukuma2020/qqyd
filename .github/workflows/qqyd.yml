@@ -48,8 +48,7 @@ jobs:
           node qqyd.js
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+         
       - name: ' 运行 【企鹅阅读二】'
         if: env.COOKIE_QQYD2
         run: |
@@ -142,6 +141,4 @@ jobs:
           node qqyd.js
         env:
           COOKIE_QQYD: ${{ secrets.COOKIE_QQYD16 }}
-          BARK_PUSH: ${{ secrets.BARK_PUSH }}
-          BARK_SOUND: ${{ secrets.BARK_SOUND }}
-
+          
